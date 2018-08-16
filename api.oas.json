@@ -1,0 +1,37 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Bug report",
+    "version": "undefined"
+  },
+  "servers": [],
+  "paths": {},
+  "components": {
+    "schemas": {
+      "FooCore": {
+        "description": "This is FooCore",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "type": "object"
+      },
+      "Foo": {
+        "description": "This is Foo, not FooCore",
+        "$ref": "#/components/schemas/FooCore"
+      }
+    },
+    "responses": {},
+    "parameters": {},
+    "examples": {},
+    "requestBodies": {},
+    "headers": {},
+    "securitySchemes": {},
+    "links": {},
+    "callbacks": {}
+  }
+}

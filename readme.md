@@ -1,5 +1,8 @@
 # In OAS3, converter should never use `$ref` at schema root
 
+Input: [api.raml](api.raml)  
+Output: [api.oas.json](api.oas.json)
+
 `oas-raml-coverter version 1.1.35`
 
 In the provided example, `Foo` `description` field is lost when converted to OAS3 because of the use of `$ref` which should be replaced by `allOf`.
@@ -8,7 +11,7 @@ The reason is explained in the [OAS3 specification document](https://swagger.io/
 
 > Any sibling elements of a `$ref` are ignored. This is because `$ref` works by replacing itself and everything on its level with the definition it is pointing at.
 
-To reproduce, just run
+To reproduce the output file, just run
 
 ``` text
 oas-raml-converter --from RAML --to OAS30 api.raml > api.oas.json
