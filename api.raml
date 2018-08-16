@@ -1,0 +1,10 @@
+#%RAML 1.0
+title: Bug report
+types:
+    FooCore:
+        description: This is FooCore
+        properties:
+            name: string
+    Foo:
+        description: This is Foo, not FooCore
+        type: FooCore
